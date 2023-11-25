@@ -1,0 +1,47 @@
+---
+target_var: 'price'
+
+train_test_split:
+  random_state: 42
+  train_ratio: 0.75
+  validation_ratio: 0.125
+  test_ratio: 0.125
+
+base_path: /Users/zacklarsen/Documents/Projects/kaggle
+competition_path: ${base_path}/kaggle-paris-housing-prices
+data_path: ${base_path}/data/paris_housing_prices
+raw_data_path: ${data_path}/raw
+processed_data_path: ${data_path}/processed
+model_path: ${competition_path}/models
+paths:
+  mlflow:
+    mlruns: ${competition_path}/mlruns
+  data:
+    train_raw: ${raw_data_path}/train.csv
+    test_raw: ${raw_data_path}/test.csv
+    train_typed: ${processed_data_path}/train_typed.parquet
+    test_typed: ${processed_data_path}/test_typed.parquet
+    train_clean: ${processed_data_path}/train_clean.parquet
+    X_train: ${processed_data_path}/X_train.parquet
+    X_train_transformed: ${processed_data_path}/X_train_transformed.parquet
+    X_test: ${processed_data_path}/X_test.parquet
+    X_test_transformed: ${processed_data_path}/X_test_transformed.parquet
+    X_validation: ${processed_data_path}/X_validation.parquet
+    X_validation_transformed: ${processed_data_path}/X_validation_transformed.parquet
+    y_train: ${processed_data_path}/y_train.parquet
+    y_test: ${processed_data_path}/y_test.parquet
+    y_validation: ${processed_data_path}/y_validation.parquet
+    y_pred: ${processed_data_path}/y_pred.parquet
+    submission: ${processed_data_path}/submission.csv
+  models:
+    lr: ${model_path}/lr_clf.pkl
+    xgboost: ${model_path}/xgboost.pkl
+    lightgbm: ${model_path}/lightgbm
+    catboost: ${model_path}/catboost
+    pycaret: ${model_path}/pycaret
+    tpot: ${model_path}/tpot
+
+
+defaults:
+  - run: run_1
+  - _self_
