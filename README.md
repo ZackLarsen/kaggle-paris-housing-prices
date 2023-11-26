@@ -2,6 +2,16 @@
 
 [Kaggle competition](https://www.kaggle.com/competitions/playground-series-s3e6/overview)
 
+## Workflow
+
+Run experiments:
+
+- [ ] Define experiment
+
+Compare experiment results:
+
+- [ ] Compare models
+
 ## MLflow UI
 
 First, navigate to the mlruns directory below.

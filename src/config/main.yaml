@@ -1,4 +1,8 @@
 ---
+defaults:
+  - model: rf_reg
+  - _self_
+
 target_var: 'price'
 
 train_test_split:
@@ -33,15 +37,10 @@ paths:
     y_validation: ${processed_data_path}/y_validation.parquet
     y_pred: ${processed_data_path}/y_pred.parquet
     submission: ${processed_data_path}/submission.csv
-  models:
-    lr: ${model_path}/lr_clf.pkl
-    xgboost: ${model_path}/xgboost.pkl
-    lightgbm: ${model_path}/lightgbm
-    catboost: ${model_path}/catboost
-    pycaret: ${model_path}/pycaret
-    tpot: ${model_path}/tpot
-
-
-defaults:
-  - run: run_1
-  - _self_
+  # models:
+  #   lr: ${model_path}/lr_clf.pkl
+  #   xgboost: ${model_path}/xgboost.pkl
+  #   lightgbm: ${model_path}/lightgbm
+  #   catboost: ${model_path}/catboost
+  #   pycaret: ${model_path}/pycaret
+  #   tpot: ${model_path}/tpot
