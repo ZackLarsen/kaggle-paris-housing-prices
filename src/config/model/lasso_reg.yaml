@@ -1,3 +1,4 @@
-type: LinearRegression
+type: Lasso
 parameters:
+  alpha: 0.75
   fit_intercept: True

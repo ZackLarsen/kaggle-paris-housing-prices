@@ -1,0 +1,6 @@
+type: DecisionTreeRegressor
+parameters:
+  criterion: squared_error
+  max_depth: 5
+  min_samples_split: 4
+  min_samples_leaf: 2

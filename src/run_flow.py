@@ -5,7 +5,6 @@ import hydra
 from hydra import compose, initialize
 from omegaconf import DictConfig
 from prefect import flow, get_run_logger
-# import mlflow
 
 sys.path.append(str(Path.cwd().parent))  # Have to append string - see here: https://github.com/takluyver/entrypoints/issues/43
 

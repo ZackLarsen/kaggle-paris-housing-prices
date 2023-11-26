@@ -1,0 +1,3 @@
+type: LGBMRegressor
+parameters:
+  alpha: 0.5

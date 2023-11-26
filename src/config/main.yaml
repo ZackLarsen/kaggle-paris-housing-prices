@@ -1,6 +1,6 @@
 ---
 defaults:
-  - model: rf_reg
+  - model: auto_reg
   - _self_
 
 target_var: 'price'

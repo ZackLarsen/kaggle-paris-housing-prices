@@ -1,5 +1,5 @@
 type: SVR
 parameters:
-  - kernel: rbf
-  - C: 1.0
-  - epsilon: 0.2
+  kernel: rbf
+  C: 1.0
+  epsilon: 0.2

@@ -1,0 +1,9 @@
+type: AutoML
+parameters:
+  task: regression
+  metric: rmse
+  estimator_list:
+    - xgboost
+    - rf
+    - lgbm
+    - extra_tree

@@ -1,0 +1,5 @@
+type: ElasticNet
+parameters:
+  alpha: 0.5
+  l1_ratio: 0.5
+  fit_intercept: True

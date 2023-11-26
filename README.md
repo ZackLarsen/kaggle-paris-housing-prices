@@ -28,10 +28,11 @@ Registering models:
 
 ## MLflow UI
 
-First, navigate to the mlruns directory below.
+First, navigate to the mlruns directory below and activate the conda/mamba environment.
 
 ```bash
 cd /Users/zacklarsen/Documents/Projects/kaggle/kaggle-paris-housing-prices/mlruns/
+mamba activate kaggle_paris
 ```
 
 Then, run the following command to start the MLflow UI.
