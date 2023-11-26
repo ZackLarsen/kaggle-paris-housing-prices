@@ -7,7 +7,7 @@ from omegaconf import DictConfig
 from prefect import flow, get_run_logger
 # import mlflow
 
-sys.path.append(Path.cwd().parent)
+sys.path.append(str(Path.cwd().parent))  # Have to append string - see here: https://github.com/takluyver/entrypoints/issues/43
 
 from steps.ingest import ingest_raw_data
 from steps.clean import clean_data
@@ -25,20 +25,15 @@ from steps.register import register_model
 def run_flow(cfg: DictConfig) -> None:
     logger = get_run_logger()
     logger.info("Running flow")
-    raw_data = ingest_raw_data(cfg)
-    cleaned_data = clean_data(raw_data)
-    splits = split(cfg, cleaned_data)
-    save_splits(cfg, splits)
+
+    # raw_data = ingest_raw_data(cfg)
+    # cleaned_data = clean_data(raw_data)
+    # splits = split(cfg, cleaned_data)
+    # save_splits(cfg, splits)
+
     # transform()
 
-    model = train(cfg)
-    # mlflow.set_tracking_uri('sqlite:///mlflow.db')
-    # with mlflow.start_run():
-    #     train(cfg)
-    # mlflow.end_run()
-
-    save_model(cfg, model)
-    # register_model(cfg, model)
+    train(cfg)
 
     # evaluate()
     # tune()

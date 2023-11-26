@@ -2,24 +2,37 @@
 
 [Kaggle competition](https://www.kaggle.com/competitions/playground-series-s3e6/overview)
 
+## MLflow UI
+
+First, navigate to the mlruns directory below.
+
+```bash
+cd /Users/zacklarsen/Documents/Projects/kaggle/kaggle-paris-housing-prices/mlruns/
+```
+
+Then, run the following command to start the MLflow UI.
+
+```bash
+mlflow ui --backend-store-uri file:///Users/zacklarsen/Documents/Projects/kaggle/kaggle-paris-housing-prices/mlruns/
+```
+
+## Setting MLflow tracking URI to local file
+
+```python
+import mlflow
+mlflow.set_tracking_uri('file:///Users/zacklarsen/Documents/Projects/kaggle/kaggle-paris-housing-prices/mlruns/')
+```
+
+## Setting MLflow experiment
+
+```python
+mlflow.set_experiment("Kaggle Paris Housing")
+```
+
 ## Setting MLflow tracking server
 
 ```bash
 mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns --host
-```
-
-## MLflow UI
-
-```bash
-mlflow ui
-```
-
-```bash
-http://localhost:5000
-```
-
-```bash
-http://127.0.0.1:8080
 ```
 
 ## Downloading the data
