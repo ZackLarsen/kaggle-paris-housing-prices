@@ -6,11 +6,25 @@
 
 Run experiments:
 
-- [ ] Define experiment
+- Define configuration with model type and parameters
+- Run run_flow.py to run the experiment
 
 Compare experiment results:
 
-- [ ] Compare models
+- Using a Jupyter notebook:
+  - Go to "Experiments" tab in MLflow UI
+  - Click on the experiment you want to compare
+  - Click on the "Chart view"
+- Using the MLflow UI:
+
+Registering models:
+
+- Using CLI:
+  - Start an MLflow server using SQLite as the backend store
+- Using the MLflow Registry UI:
+  - Navigate to the MLflow UI (usually at http://127.0.0.1:5000 if running locally).
+  - Go to the "Experiments" tab, find your run, and click on the logged model in the "Artifacts" section.
+  - Use the "Register Model" button to register the model.
 
 ## MLflow UI
 
